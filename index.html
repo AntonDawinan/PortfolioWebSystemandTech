@@ -604,6 +604,10 @@
         .contact-card a {
             color: var(--light);
             font-size: 1rem;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            display: block;
+            line-height: 1.5;
         }
 
         /* Footer */
@@ -872,12 +876,12 @@
             <div class="contact-card">
                 <span class="contact-icon">📧</span>
                 <h4>Email</h4>
-                <a href="mailto:your.email@example.com">antondawinan.email@example.com</a>
+                <a href="https://gmail.com/AntonDawinan">gmail.com/antondawinan</span></a>
             </div>
             <div class="contact-card">
                 <span class="contact-icon">💼</span>
                 <h4>LinkedIn</h4>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                <a href="https://facebook.com/AntonDawinan" target="_blank">facebook.com/AntonDawinan</a>
             </div>
             <div class="contact-card">
                 <span class="contact-icon">💻</span>
@@ -894,12 +898,12 @@
         <div class="social-links">
             <a href="https://github.com/username" target="_blank">⚡</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗</a>
-            <a href="mailto:your.email@example.com">📬</a>
+            <a href="/cdn-cgi/l/email-protection#e69f899394c8838b878f8aa6839e878b968a83c885898b">📬</a>
         </div>
         <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">Built with passion & code</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -944,13 +948,4 @@
         // Parallax effect for sections
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('section');
-            
-            parallaxElements.forEach((el, index) => {
-                const speed = 0.05;
-                el.style.transform = `translateY(${scrolled * speed * (index % 2 === 0 ? 1 : -1)}px)`;
-            });
-        });
-    </script>
-</body>
-</html>
+            const parallaxElement
