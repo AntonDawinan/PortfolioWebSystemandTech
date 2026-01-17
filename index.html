@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anton Dawinan | IT Portfolio</title>
+    <title>Anton Sebastiacn C.Dawinan | IT Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Fira+Code:wght@400;500&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -572,7 +572,6 @@
             border-radius: 20px;
             padding: 2px;
             background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             opacity: 0;
@@ -901,6 +900,19 @@
             <a href="mailto:antondawinan@gmail.com">📬</a>
         </div>
         <p style="margin-top: 20px; opacity: 0.6; font-size: 0.9rem;">Built with passion & code</p>
+        <hr style="margin: 40px 0; border: 1px solid var(--primary); opacity: 0.3;">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem; text-shadow: 0 0 20px var(--primary);">🎮 Games</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; max-width: 100%; height: calc(100vh - 200px);">
+            <!-- Snake Game -->
+            <div style="background: rgba(0, 255, 136, 0.05); border: 2px solid var(--primary); border-radius: 10px; padding: 20px; overflow: hidden; display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 15px; color: var(--primary); font-size: 1.5rem; text-align: center;">🐍 Snake</h3>
+                <iframe src="snake.html" style="width: 100%; flex: 1; border: none; border-radius: 5px;"></iframe>
+            </div>
+
+            <!-- Fireworks Only -->
+            <iframe src="fireworks-only.html" style="width: 100%; height: 100%; border: 2px solid var(--primary); border-radius: 10px;"></iframe>
+        </div>
     </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -948,4 +960,11 @@
         // Parallax effect for sections
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const parallaxElement }
+            document.querySelectorAll('section').forEach((section, index) => {
+                const speed = 0.5;
+                section.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
